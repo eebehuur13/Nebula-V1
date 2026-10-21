@@ -2,7 +2,7 @@
 
 Nebula is an organisation's memory for Claude. It's an MCP server that people add to their own Claude as one connector. From then on, Claude can answer questions from the organisation's actual documents, keep what people learn, and show each person only what they're allowed to see.
 
-We built it at Rocket Learning (RL) and tested it end to end in October 2026 on a live AWS deployment, with Google Drive and real Claude conversations. Google Drive works fully. Notion and Granola connectors are built and tested offline, but haven't been connected to live accounts.
+Tested it end to end in October 2026 on a live AWS deployment, with Google Drive and real Claude conversations. Google Drive works fully. Notion and Granola connectors are built and tested offline, but haven't been connected to live accounts.
 
 ![Nebula sits between Claude and the organisation's sources](docs/images/overview.png)
 
