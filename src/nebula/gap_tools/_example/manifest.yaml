@@ -1,0 +1,26 @@
+# Template for a gap tool. Folders starting with "_" are never loaded.
+# Copy this folder to gap_tools/<id>/, fill it in, and set status: live.
+id: speak
+description: >
+  Turn a script into natural spoken audio (an MP3 voice-over) in English, Hindi or another
+  Indian language, for videos and voice notes. Returns a download link for the audio file.
+when_not_to_use: >
+  Anything that isn't spoken audio. Write the script, captions, video and everything
+  else with your own abilities; only call this for the voice itself.
+gap:
+  claude_cannot: "Produce a natural human-sounding voice; Claude's sandbox has no TTS model or network TTS."
+  checked_how: "Asked Claude (claude.ai, Pro) on <date> to make a narrated video; it could only produce silent video and a script."
+  recheck_by: "2027-01-31"
+kind: api            # api | source_action | sandbox
+access: write        # read | write (write tools ask for approval in Claude)
+long_running: false
+groups: [all_rl]     # who can use it
+owner: comms         # team that owns it
+status: draft        # draft | live | retired
+input_schema:
+  type: object
+  properties:
+    text: {type: string, description: "The script to speak."}
+    language: {type: string, description: "Language code, e.g. en-IN, hi-IN, te-IN."}
+    voice: {type: string, description: "Optional voice name."}
+  required: [text]

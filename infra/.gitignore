@@ -1,0 +1,7 @@
+cdk.out/
+.venv/
+__pycache__/
+*.py[oc]
+.DS_Store
+# Holds your account and region lookups
+cdk.context.json

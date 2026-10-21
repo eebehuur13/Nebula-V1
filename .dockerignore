@@ -1,0 +1,41 @@
+# Keep the build context small and the image free of local state.
+# infra/app.py mirrors this list in DOCKER_EXCLUDES; keep the two in sync.
+
+# Local environments and data
+.venv
+**/.venv
+.data
+.env
+.env.*
+
+# VCS and OS noise
+.git
+.gitignore
+**/.DS_Store
+
+# Infrastructure code (not needed in the image; also contains cdk.out)
+infra
+
+# Python caches and test artifacts
+**/__pycache__
+**/*.py[oc]
+.pytest_cache
+.ruff_cache
+.mypy_cache
+.coverage
+.coverage.*
+htmlcov
+tests
+
+# Build outputs
+build
+dist
+wheels
+*.egg-info
+
+# Docs at the root (package data under src/ is kept); README is needed by pyproject
+*.md
+!README.md
+
+# Note: Dockerfile and .dockerignore stay in the context on purpose, so CDK's
+# asset hash changes (and the image rebuilds) when either of them changes.

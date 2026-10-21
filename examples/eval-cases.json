@@ -1,0 +1,18 @@
+[
+  {
+    "question": "When does teacher training move to Saturdays?",
+    "expect": {"title": "Programme review, October", "text": "Saturdays from 1 November"}
+  },
+  {
+    "question": "What is the active centre target for Guntur?",
+    "expect": {"title": "Programme review, October", "text": "450 active centres"}
+  },
+  {
+    "question": "आंगनबाड़ी केन्द्रों का निरीक्षण किसने किया?",
+    "expect": {"title": "District notice (Hindi)", "text": "जिला कार्यक्रम अधिकारी"}
+  },
+  {
+    "question": "What is the address of the office on Mars?",
+    "expect": {"absent": true}
+  }
+]
